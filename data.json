@@ -10,3 +10,8 @@
     "course": "Flask and MongoDB"
   }
 ]
+
+{
+  "message": "Updated API data",
+  "status": "success"
+}
