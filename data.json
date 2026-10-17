@@ -9,9 +9,11 @@
     "name": "Student",
     "course": "Flask and MongoDB"
   }
-]
+
 
 {
   "message": "Updated API data",
   "status": "success"
 }
+
+]
