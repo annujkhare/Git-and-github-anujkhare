@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": 1,
     "name": "Anuj",
@@ -8,10 +8,9 @@
     "id": 2,
     "name": "Student",
     "course": "Flask and MongoDB"
+  },
+  {
+    "message": "Updated API data",
+    "status": "success"
   }
 ]
-
-{
-  "message": "Updated API data",
-  "status": "success"
-}
