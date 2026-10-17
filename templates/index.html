@@ -3,37 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Flask MongoDB Form</title>
-
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
+    <title>To-Do Page</title>
   </head>
-
   <body>
-    <div class="container">
-      <h1>Flask & MongoDB</h1>
+    <h1>To-Do Item Form</h1>
 
-      <p>Submit your information</p>
+    <form action="/submittodoitem" method="POST">
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" name="itemName" required />
 
-      {% if error %}
-      <div class="error">{{ error }}</div>
-      {% endif %}
+      <br /><br />
 
-      <form action="/submit" method="POST">
-        <label>Name</label>
-        <input type="text" name="name" placeholder="Enter your name" />
+      <label for="itemDescription">Item Description:</label>
+      <textarea id="itemDescription" name="itemDescription" required></textarea>
 
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Enter your email" />
+      <br /><br />
 
-        <label>Message</label>
-        <textarea name="message" placeholder="Enter your message"></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      <button type="submit">Submit Item</button>
+    </form>
   </body>
 </html>
