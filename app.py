@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+﻿from flask import Flask, render_template, request, redirect, url_for, jsonify
 from pymongo import MongoClient
 from dotenv import load_dotenv
 import json
@@ -67,7 +67,7 @@ def submit():
 @app.route("/submittodoitem", methods=["POST"])
 def submit_todo_item():
     try:
-        
+
         if request.is_json:
             data = request.get_json()
         else:
@@ -76,13 +76,12 @@ def submit_todo_item():
         item_name = data.get("itemName")
         item_description = data.get("itemDescription")
 
-        
+
         if not item_name or not item_description:
             return jsonify({
                 "error": "Item name and description are required"
             }), 400
 
-        
         todo_item = {
             "itemName": item_name,
             "itemDescription": item_description
